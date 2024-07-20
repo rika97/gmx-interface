@@ -104,7 +104,7 @@ export default function Ecosystem() {
       title: "GMX Returns Calculator",
       link: "https://docs.google.com/spreadsheets/u/4/d/1mQZlztz_NpTg5qQiYIzc_Ls1OTLfMOUtmEQN-WW8jj4/copy",
       linkLabel: "docs.google.com",
-      about: t`Returns calculator for GMX and GLP`,
+      about: t`Returns calculator for GMX and GXP`,
       creatorLabel: "@AStoicTrader1",
       creatorLink: "https://twitter.com/AStoicTrader1",
       chainIds: [ARBITRUM, AVALANCHE],
@@ -411,7 +411,7 @@ export default function Ecosystem() {
       title: "Plutus",
       link: "https://plutusdao.io/vaults",
       linkLabel: "plutusdao.io",
-      about: t`GLP autocompounding vaults`,
+      about: t`GXP autocompounding vaults`,
 
       chainIds: [ARBITRUM],
     },
@@ -419,7 +419,7 @@ export default function Ecosystem() {
       title: "Beefy",
       link: "https://app.beefy.com/",
       linkLabel: "beefy.com",
-      about: t`GLP and GMX autocompounding vaults`,
+      about: t`GXP and GMX autocompounding vaults`,
 
       chainIds: [ARBITRUM, AVALANCHE],
     },

@@ -135,8 +135,8 @@ msgid "<0>The order will be executed when the oracle price is {0} {1}.</0><1>Not
 msgstr ""
 
 #: src/components/Glp/SwapErrorModal.tsx
-msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy GLP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
-msgstr "<0>풀의 최대허용량이 {0}에 도달했습니다. 다른 토큰을 이용해 GLP를 구매해주세요.</0><1>\"수수료 절약\" 섹션을 통해 가장 저렴한 수수료를 확인하세요.</1>"
+msgid "<0>The pool's capacity has been reached for {0}. Please use another token to buy GXP.</0><1>Check the \"Save on Fees\" section for tokens with the lowest fees.</1>"
+msgstr "<0>풀의 최대허용량이 {0}에 도달했습니다. 다른 토큰을 이용해 GXP를 구매해주세요.</0><1>\"수수료 절약\" 섹션을 통해 가장 저렴한 수수료를 확인하세요.</1>"
 
 #: src/components/Exchange/OrdersList.js
 msgid "<0>The price that orders can be executed at may differ slightly from the chart price, as market orders update oracle prices, while limit/trigger orders do not.</0><1>This can also cause limit/triggers to not be executed if the price is not reached for long enough. <2>Read more</2>.</1>"
@@ -155,7 +155,7 @@ msgid "<0>This will withdraw and unreserve all tokens as well as pause vesting.<
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.tsx
-msgid "<0>Total value of tokens in GLP pool ({chainName}).</0><1>This value may be higher on other websites due to the collateral of positions being included in the calculation.</1>"
+msgid "<0>Total value of tokens in GXP pool ({chainName}).</0><1>This value may be higher on other websites due to the collateral of positions being included in the calculation.</1>"
 msgstr ""
 
 #: src/lib/contracts/transactionErrors.tsx
@@ -212,7 +212,7 @@ msgid "APRs are updated weekly on Wednesday and will depend on the fees collecte
 msgstr "APR은 매주 수요일에 업데이트되며 한 주 동안 쌓인 수수료에 따라 달라집니다."
 
 #: src/pages/Stake/StakeV2.tsx
-msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week. <0/><1/>Historical GLP APRs can be checked in this <2>community dashboard</2>."
+msgid "APRs are updated weekly on Wednesday and will depend on the fees collected for the week. <0/><1/>Historical GXP APRs can be checked in this <2>community dashboard</2>."
 msgstr ""
 
 #: src/pages/Dashboard/DashboardV2.tsx
@@ -566,11 +566,11 @@ msgid "As network fees have increased, an additional execution fee is needed."
 msgstr ""
 
 #: src/components/Exchange/NoLiquidityErrorModal.tsx
-msgid "As there is not enough liquidity in GLP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
-msgstr "{0}에서 {swapTokenSymbol}로 교환할 수 있는 유동성이 GLP에 충분하지 않기 때문에, 이하의 옵션을 사용해주세요:"
+msgid "As there is not enough liquidity in GXP to swap {0} to {swapTokenSymbol}, you can use the option below to do so:"
+msgstr "{0}에서 {swapTokenSymbol}로 교환할 수 있는 유동성이 GXP에 충분하지 않기 때문에, 이하의 옵션을 사용해주세요:"
 
 #: src/pages/Dashboard/DashboardV2.tsx
-msgid "Assets Under Management: GMX staked (All chains) + GLP pool ({chainName}) +  GM Pools ({chainName})."
+msgid "Assets Under Management: GMX staked (All chains) + GXP pool ({chainName}) +  GM Pools ({chainName})."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -591,8 +591,8 @@ msgstr "사용가능 유동성"
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to deposit into GLP."
-msgstr "GLP에 예치할 수 있는 양"
+msgid "Available amount to deposit into GXP."
+msgstr "GXP에 예치할 수 있는 양"
 
 #: src/components/Synthetics/GmList/GmList.tsx
 #: src/components/Synthetics/GmList/GmList.tsx
@@ -601,8 +601,8 @@ msgstr ""
 
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
-msgid "Available amount to withdraw from GLP. Funds not utilized by current open positions."
-msgstr "GLP로부터 인출가능한 수량. 현재 포지션에 의해 활용되고 있지 않은 유휴 수량"
+msgid "Available amount to withdraw from GXP. Funds not utilized by current open positions."
+msgstr "GXP로부터 인출가능한 수량. 현재 포지션에 의해 활용되고 있지 않은 유휴 수량"
 
 #: src/pages/Home/Home.js
 msgid "Available on your preferred network"
@@ -722,8 +722,8 @@ msgid "Buy"
 msgstr "구매"
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Buy / Sell GLP"
-msgstr "GLP 구매 / 판매"
+msgid "Buy / Sell GXP"
+msgstr "GXP 구매 / 판매"
 
 #: src/pages/BuyGMX/BuyGMX.tsx
 msgid "Buy AVAX directly to Avalanche or transfer it there."
@@ -741,11 +741,11 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.tsx
-msgid "Buy GLP"
-msgstr "GLP 구매"
+msgid "Buy GXP"
+msgstr "GXP 구매"
 
 #: src/pages/Buy/Buy.tsx
-msgid "Buy GLP or GMX"
+msgid "Buy GXP or GMX"
 msgstr ""
 
 #: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
@@ -754,7 +754,7 @@ msgid "Buy GM"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Buy GM tokens before the epoch resets in {0} to be eligible for the Bonus Rebate. Alternatively, wait for the epoch to reset to redeem GLP and buy GM within the same epoch."
+msgid "Buy GM tokens before the epoch resets in {0} to be eligible for the Bonus Rebate. Alternatively, wait for the epoch to reset to redeem GXP and buy GM within the same epoch."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.tsx
@@ -1772,7 +1772,7 @@ msgid "Earn"
 msgstr "보상"
 
 #: src/pages/Stake/StakeV2.tsx
-msgid "Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GLP to GM. Only for GMX V2.<0/>Earn prizes by participating in GMX Trading Competitions."
+msgid "Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GXP to GM. Only for GMX V2.<0/>Earn prizes by participating in GMX Trading Competitions."
 msgstr ""
 
 #: src/components/Stake/GMXAprTooltip.tsx
@@ -2242,12 +2242,12 @@ msgid "Fees generated by GMX"
 msgstr "GMX로 획득한 수수료"
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you sell GLP for. <0/>Enter the amount of GLP you want to redeem in the order form, then check here to compare fees."
-msgstr "GLP를 판매하는 양에 따라서 수수료가 상이합니다. <0/>판매하려는 GLP의 양을 주문 양식에 입력하고, 여기에서 수수료를 비교하세요."
+msgid "Fees may vary depending on which asset you sell GXP for. <0/>Enter the amount of GXP you want to redeem in the order form, then check here to compare fees."
+msgstr "GXP를 판매하는 양에 따라서 수수료가 상이합니다. <0/>판매하려는 GXP의 양을 주문 양식에 입력하고, 여기에서 수수료를 비교하세요."
 
 #: src/components/Glp/GlpSwap.js
-msgid "Fees may vary depending on which asset you use to buy GLP. <0/>Enter the amount of GLP you want to purchase in the order form, then check here to compare fees."
-msgstr "GLP를 구매하는 양에 따라서 수수료가 상이합니다. <0/>구매하려는 GLP의 양을 주문 양식에 입력하고, 여기에서 수수료를 비교하세요."
+msgid "Fees may vary depending on which asset you use to buy GXP. <0/>Enter the amount of GXP you want to purchase in the order form, then check here to compare fees."
+msgstr "GXP를 구매하는 양에 따라서 수수료가 상이합니다. <0/>구매하려는 GXP의 양을 주문 양식에 입력하고, 여기에서 수수료를 비교하세요."
 
 #: src/pages/Dashboard/DashboardV2.tsx
 msgid "Fees since"
@@ -2339,46 +2339,46 @@ msgstr "GBC NFT의 APR 트래커 및 보상"
 
 #: src/pages/Dashboard/DashboardV2.tsx
 #: src/pages/Dashboard/DashboardV2.tsx
-msgid "GLP Index Composition"
-msgstr "GLP 인덱스 구성"
+msgid "GXP Index Composition"
+msgstr "GXP 인덱스 구성"
 
 #: src/pages/Dashboard/DashboardV2.tsx
 #: src/pages/Dashboard/DashboardV2.tsx
-msgid "GLP Pool"
-msgstr "GLP 풀"
+msgid "GXP Pool"
+msgstr "GXP 풀"
 
 #: src/pages/Stake/StakeV2.tsx
 #: src/pages/Stake/StakeV2.tsx
-msgid "GLP Vault"
+msgid "GXP Vault"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "GLP and GMX autocompounding vaults"
+msgid "GXP and GMX autocompounding vaults"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "GLP autocompounding vaults"
+msgid "GXP autocompounding vaults"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "GLP buy disabled, pending {0} upgrade"
-msgstr "{0} 업그레이드를 위해 GLP 구매가 비활성화되었습니다"
+msgid "GXP buy disabled, pending {0} upgrade"
+msgstr "{0} 업그레이드를 위해 GXP 구매가 비활성화되었습니다"
 
 #: src/components/TokenCard/TokenCard.tsx
 #: src/pages/Dashboard/DashboardV2.tsx
-msgid "GLP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees."
+msgid "GXP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees."
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "GLP sell disabled, pending {0} upgrade"
-msgstr "{0} 업그레이드를 위해 GLP 판매가 비활성화되었습니다"
+msgid "GXP sell disabled, pending {0} upgrade"
+msgstr "{0} 업그레이드를 위해 GXP 판매가 비활성화되었습니다"
 
 #: src/components/Synthetics/UserIncentiveDistributionList/UserIncentiveDistributionList.tsx
-msgid "GLP to GM Airdrop"
+msgid "GXP to GM Airdrop"
 msgstr ""
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "GLP to GM migration has reduced Fees due to STIP incentives. <0>Read more</0>."
+msgid "GXP to GM migration has reduced Fees due to STIP incentives. <0>Read more</0>."
 msgstr ""
 
 #: src/components/Synthetics/UserIncentiveDistributionList/UserIncentiveDistributionList.tsx
@@ -2724,8 +2724,8 @@ msgid "Insufficient Available Liquidity to swap to {0}:"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Insufficient GLP balance"
-msgstr "GLP 잔고 부족"
+msgid "Insufficient GXP balance"
+msgstr "GXP 잔고 부족"
 
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/PositionSeller.js
@@ -3473,12 +3473,12 @@ msgid "Max leverage: {0}x"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}. Please mint GLP using another token"
+msgid "Max pool capacity reached for {0}. Please mint GXP using another token"
 msgstr "{0}의 최대 풀 수용량에 도달했습니다"
 
 #: src/components/Glp/GlpSwap.js
-msgid "Max pool capacity reached for {0}<0/><1/>Please mint GLP using another token"
-msgstr "최대 풀 수용량인 {0}에 도달했습니다<0/><1/>다른 토큰을 이용행 GLP를 민트해주세요"
+msgid "Max pool capacity reached for {0}<0/><1/>Please mint GXP using another token"
+msgstr "최대 풀 수용량인 {0}에 도달했습니다<0/><1/>다른 토큰을 이용행 GXP를 민트해주세요"
 
 #: src/components/SettingsModal/SettingsModal.tsx
 msgid "Max slippage precision is -0.01%"
@@ -4188,15 +4188,15 @@ msgid "Please input a referral code to benefit from fee discounts."
 msgstr "수수료 할인의 혜택을 받으려면 추천인 코드를 입력해주세요."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-#~ msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GLP and Multiplier Points and voting power to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+#~ msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GXP and Multiplier Points and voting power to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GXP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 #~ msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.js
-#~ msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GLP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
-#~ msgstr "계정 전체 이전을 위해서만 해당 기능을 사용해주세요.<0/>이 기능은, 귀하의 GMX, esGMX, GLP 및 멀티플라이어 포인트 전부를 새로운 계정으로 전송합니다.<1/>이전은 수취 게정이 이전에 GMX, GLP를 스테이킹한 적이 없는 경우에만 지원됩니다.<2/>이전은 단방향이며, 발송 계정으로 다시 이전하는 것이 불가능합니다."
+#~ msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GXP and Multiplier Points to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GXP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+#~ msgstr "계정 전체 이전을 위해서만 해당 기능을 사용해주세요.<0/>이 기능은, 귀하의 GMX, esGMX, GXP 및 멀티플라이어 포인트 전부를 새로운 계정으로 전송합니다.<1/>이전은 수취 게정이 이전에 GMX, GXP를 스테이킹한 적이 없는 경우에만 지원됩니다.<2/>이전은 단방향이며, 발송 계정으로 다시 이전하는 것이 불가능합니다."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GLP, Multiplier Points and voting power to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
+msgid "Please only use this for full account transfers.<0/>This will transfer all your GMX, esGMX, GXP, Multiplier Points and voting power to your new account.<1/>Transfers are only supported if the receiving account has not staked GMX or GXP tokens before.<2/>Transfers are one-way, you will not be able to transfer staked tokens back to the sending account."
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
@@ -4526,7 +4526,7 @@ msgid "Protocol risk explorer and stats"
 msgstr ""
 
 #: src/pages/BuyGlp/BuyGlp.js
-msgid "Purchase <0>GLP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverage trading."
+msgid "Purchase <0>GXP tokens</0> to earn {nativeTokenSymbol} fees from swaps and leverage trading."
 msgstr ""
 
 #: src/pages/MarketPoolsPage/MarketPoolsPage.tsx
@@ -4646,15 +4646,15 @@ msgid "Receiver Address"
 msgstr "수령할 주소"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Receiver has not staked GLP tokens before"
-msgstr "수취인은 지금까지 GLP 토큰을 스테이킹한 적이 없습니다."
+msgid "Receiver has not staked GXP tokens before"
+msgstr "수취인은 지금까지 GXP 토큰을 스테이킹한 적이 없습니다."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
 msgid "Receiver has not staked GMX tokens before"
 msgstr "수취인은 지금까지 GMX 토큰을 스테이킹한 적이 없습니다."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Receiver has staked GMX/GLP before"
+msgid "Receiver has staked GMX/GXP before"
 msgstr ""
 
 #: src/components/Glp/GlpSwap.js
@@ -4799,8 +4799,8 @@ msgid "Reserved for Vesting"
 msgstr ""
 
 #: src/pages/Ecosystem/Ecosystem.js
-msgid "Returns calculator for GMX and GLP"
-msgstr "GMX 및 GLP 수익 계산기"
+msgid "Returns calculator for GMX and GXP"
+msgstr "GMX 및 GXP 수익 계산기"
 
 #: src/components/Referrals/ClaimAffiliatesModal/ClaimAffiliatesModal.tsx
 #: src/pages/Stake/StakeV1.js
@@ -4949,8 +4949,8 @@ msgstr ""
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/pages/Stake/StakeV2.tsx
-msgid "Sell GLP"
-msgstr "GLP 판매"
+msgid "Sell GXP"
+msgstr "GXP 판매"
 
 #: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
 #: src/components/Synthetics/GmSwap/GmSwapBox/GmSwapBox.tsx
@@ -4999,8 +4999,8 @@ msgid "Sender has withdrawn all tokens from Affiliate Vesting Vault"
 msgstr ""
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Sender has withdrawn all tokens from GLP Vesting Vault"
-msgstr "GLP의 베스팅 볼트에서 모든 토큰을 인출했습니다."
+msgid "Sender has withdrawn all tokens from GXP Vesting Vault"
+msgstr "GXP의 베스팅 볼트에서 모든 토큰을 인출했습니다."
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
 msgid "Sender has withdrawn all tokens from GMX Vesting Vault"
@@ -5253,7 +5253,7 @@ msgid "Stake"
 msgstr "스테이킹"
 
 #: src/pages/Stake/StakeV2.tsx
-msgid "Stake <0>GMX</0> and buy <1>GM</1> or <2>GLP</2> to earn rewards."
+msgid "Stake <0>GMX</0> and buy <1>GM</1> or <2>GXP</2> to earn rewards."
 msgstr ""
 
 #: src/pages/Stake/StakeV2.tsx
@@ -6531,11 +6531,11 @@ msgid "Vest"
 msgstr ""
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with GLP on Arbitrum"
-msgstr "Arbitrum에서 GLP로 베스팅하기"
+msgid "Vest with GXP on Arbitrum"
+msgstr "Arbitrum에서 GXP로 베스팅하기"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
-msgid "Vest with GLP on Avalanche"
+msgid "Vest with GXP on Avalanche"
 msgstr "Avalanche에서 GMX로 베스팅하기"
 
 #: src/pages/ClaimEsGmx/ClaimEsGmx.js
@@ -6547,8 +6547,8 @@ msgid "Vest with GMX on Avalanche"
 msgstr "Avalanche에서 GMX로 베스팅하기"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
-msgid "Vested GLP not withdrawn"
-msgstr "베스트팅된 GLP에서 인출되지 않은 양"
+msgid "Vested GXP not withdrawn"
+msgstr "베스트팅된 GXP에서 인출되지 않은 양"
 
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
 #: src/pages/BeginAccountTransfer/BeginAccountTransfer.tsx
@@ -6747,7 +6747,7 @@ msgid "Withdraw from Affiliate Vault"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.tsx
-msgid "Withdraw from GLP Vault"
+msgid "Withdraw from GXP Vault"
 msgstr ""
 
 #: src/pages/Stake/StakeV2.tsx
@@ -7159,20 +7159,20 @@ msgid "{0} Capacity Reached"
 msgstr "{0} 수용량 도달됨"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} GLP (${1})"
-msgstr "{0} GLP (${1})"
+msgid "{0} GXP (${1})"
+msgstr "{0} GXP (${1})"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} GLP bought with {1} {2}!"
-msgstr "{1} {2}로 GLP를 구매하였습니다!"
+msgid "{0} GXP bought with {1} {2}!"
+msgstr "{1} {2}로 GXP를 구매하였습니다!"
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} GLP have been reserved for vesting."
-msgstr "{0} GLP가 베스팅을 위해 리저브되었습니다."
+msgid "{0} GXP have been reserved for vesting."
+msgstr "{0} GXP가 베스팅을 위해 리저브되었습니다."
 
 #: src/components/Glp/GlpSwap.js
-msgid "{0} GLP sold for {1} {2}!"
-msgstr "{0} GLP를 {1} {2}로 판매하였습니다!"
+msgid "{0} GXP sold for {1} {2}!"
+msgstr "{0} GXP를 {1} {2}로 판매하였습니다!"
 
 #: src/pages/Stake/StakeV2.tsx
 #: src/pages/Stake/StakeV2.tsx
@@ -7219,8 +7219,8 @@ msgid "{0} is above its target weight.<0/><1/>Get lower fees to <2>swap</2> toke
 msgstr "{0}은 목표 가중치를 초과 했습니다.<0/><1/>토큰을 {1}로 <2>스왑</2>하는 수수료가 감소합니다."
 
 #: src/pages/Dashboard/DashboardV2.tsx
-msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy GLP</2> with {1}, and to <3>swap</3> {2} for other tokens."
-msgstr "{0}은 목표 가중치를 미달합니다.<0/><1/>{1}로 <2>GLP 구매</2>를 하거나 {2}에서 다른 토큰으로 <3>스왑</3>하는 수수료가 감소합니다."
+msgid "{0} is below its target weight.<0/><1/>Get lower fees to <2>buy GXP</2> with {1}, and to <3>swap</3> {2} for other tokens."
+msgstr "{0}은 목표 가중치를 미달합니다.<0/><1/>{1}로 <2>GXP 구매</2>를 하거나 {2}에서 다른 토큰으로 <3>스왑</3>하는 수수료가 감소합니다."
 
 #: src/components/Exchange/SwapBox.js
 msgid "{0} is required for collateral."

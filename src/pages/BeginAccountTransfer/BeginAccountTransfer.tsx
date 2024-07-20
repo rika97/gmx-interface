@@ -166,7 +166,7 @@ export default function BeginAccountTransfer() {
       return t`Vested GMX not withdrawn`;
     }
     if (hasVestedGlp) {
-      return t`Vested GLP not withdrawn`;
+      return t`Vested GXP not withdrawn`;
     }
     if (!receiver || receiver.length === 0) {
       return t`Enter Receiver Address`;
@@ -180,7 +180,7 @@ export default function BeginAccountTransfer() {
     }
 
     if (hasStakedGmx || hasStakedGlp) {
-      return t`Receiver has staked GMX/GLP before`;
+      return t`Receiver has staked GMX/GXP before`;
     }
 
     if ((parsedReceiver || "").toString().toLowerCase() === (account || "").toString().toLowerCase()) {
@@ -315,9 +315,9 @@ export default function BeginAccountTransfer() {
           <Trans>
             Please only use this for full account transfers.
             <br />
-            This will transfer all your GMX, esGMX, GLP, Multiplier Points and voting power to your new account.
+            This will transfer all your GMX, esGMX, GXP, Multiplier Points and voting power to your new account.
             <br />
-            Transfers are only supported if the receiving account has not staked GMX or GLP tokens before.
+            Transfers are only supported if the receiving account has not staked GMX or GXP tokens before.
             <br />
             Transfers are one-way, you will not be able to transfer staked tokens back to the sending account.
           </Trans>
@@ -350,7 +350,7 @@ export default function BeginAccountTransfer() {
               <Trans>Sender has withdrawn all tokens from GMX Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasVestedGlp}>
-              <Trans>Sender has withdrawn all tokens from GLP Vesting Vault</Trans>
+              <Trans>Sender has withdrawn all tokens from GXP Vesting Vault</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasVestedAffiliate}>
               <Trans>Sender has withdrawn all tokens from Affiliate Vesting Vault</Trans>
@@ -379,7 +379,7 @@ export default function BeginAccountTransfer() {
               <Trans>Receiver has not staked GMX tokens before</Trans>
             </ValidationRow>
             <ValidationRow isValid={!hasStakedGlp}>
-              <Trans>Receiver has not staked GLP tokens before</Trans>
+              <Trans>Receiver has not staked GXP tokens before</Trans>
             </ValidationRow>
           </div>
 
