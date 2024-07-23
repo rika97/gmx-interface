@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
 
 const INCENTIVE_TYPE_MAP = {
   1001: t`GM Airdrop`,
-  1002: t`GLP to GM Airdrop`,
+  1002: t`GXP to GM Airdrop`,
   1003: t`TRADING Airdrop`,
 };
 

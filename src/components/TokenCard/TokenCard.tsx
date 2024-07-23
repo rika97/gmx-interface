@@ -175,17 +175,17 @@ export default function TokenCard({ showRedirectModal }: Props) {
       <div className="Home-token-card-option">
         <div>
           <div className="Home-token-card-option-icon">
-            <img src={glpIcon} width="40" alt="GLP Icon" /> GLP
+            <img src={glpIcon} width="40" alt="GXP Icon" /> GXP
           </div>
           <div className="Home-token-card-option-info">
             <div className="Home-token-card-option-title">
               <Trans>
-                GLP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees.
+                GXP is the liquidity provider token for GMX V1 markets. Accrues 70% of the V1 markets generated fees.
               </Trans>
               {arbitrumIncentiveState?.migration?.isActive && (
                 <BannerButton
                   className="mt-md"
-                  label="Migrating from GLP to GM is incentivized in Arbitrum."
+                  label="Migrating from GXP to GM is incentivized in Arbitrum."
                   link="https://gmxio.notion.site/GMX-S-T-I-P-Incentives-Distribution-1a5ab9ca432b4f1798ff8810ce51fec3#a2d1ea61dd1147b195b7e3bd769348d3"
                 />
               )}

@@ -1486,8 +1486,8 @@ export default function StakeV2() {
     }
 
     setIsVesterDepositModalVisible(true);
-    setVesterDepositTitle(t`GLP Vault`);
-    setVesterDepositStakeTokenLabel("staked GLP");
+    setVesterDepositTitle(t`GXP Vault`);
+    setVesterDepositStakeTokenLabel("staked GXP");
     setVesterDepositMaxAmount(remainingVestableAmount);
     setVesterDepositBalance(processedData?.esGmxBalance);
     setVesterDepositEscrowedBalance(vestingData.glpVester.escrowedBalance);
@@ -1518,7 +1518,7 @@ export default function StakeV2() {
     }
 
     setIsVesterWithdrawModalVisible(true);
-    setVesterWithdrawTitle(t`Withdraw from GLP Vault`);
+    setVesterWithdrawTitle(t`Withdraw from GXP Vault`);
     setVesterWithdrawAddress(glpVesterAddress);
   };
 
@@ -1693,7 +1693,7 @@ export default function StakeV2() {
     }
     let glpStr;
     if (processedData?.glpBalance?.gt(0)) {
-      glpStr = formatAmount(processedData.glpBalance, 18, 2, true) + " GLP";
+      glpStr = formatAmount(processedData.glpBalance, 18, 2, true) + " GXP";
     }
     let gmStr;
     if (userTotalGmInfo?.balance && userTotalGmInfo?.balance.gt(0)) {
@@ -2202,8 +2202,8 @@ export default function StakeV2() {
             <div>
               <div className="App-card-title">
                 <div className="inline-items-center">
-                  <img className="mr-xs" alt="GLP" src={icons.glp} height={20} />
-                  GLP
+                  <img className="mr-xs" alt="GXP" src={icons.glp} height={20} />
+                  GXP
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -2219,7 +2219,7 @@ export default function StakeV2() {
                     <Trans>Wallet</Trans>
                   </div>
                   <div>
-                    {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} GLP ($
+                    {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} GXP ($
                     {formatKeyAmount(processedData, "glpBalanceUsd", USD_DECIMALS, 2, true)})
                   </div>
                 </div>
@@ -2228,7 +2228,7 @@ export default function StakeV2() {
                     <Trans>Staked</Trans>
                   </div>
                   <div>
-                    {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} GLP ($
+                    {formatKeyAmount(processedData, "glpBalance", GLP_DECIMALS, 2, true)} GXP ($
                     {formatKeyAmount(processedData, "glpBalanceUsd", USD_DECIMALS, 2, true)})
                   </div>
                 </div>
@@ -2264,7 +2264,7 @@ export default function StakeV2() {
                               APRs are updated weekly on Wednesday and will depend on the fees collected for the week.{" "}
                               <br />
                               <br />
-                              Historical GLP APRs can be checked in this{" "}
+                              Historical GXP APRs can be checked in this{" "}
                               <ExternalLink href="https://dune.com/saulius/gmx-analytics">
                                 community dashboard
                               </ExternalLink>
@@ -2331,7 +2331,7 @@ export default function StakeV2() {
                     <Trans>Total Staked</Trans>
                   </div>
                   <div>
-                    {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} GLP ($
+                    {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} GXP ($
                     {formatKeyAmount(processedData, "glpSupplyUsd", USD_DECIMALS, 2, true)})
                   </div>
                 </div>
@@ -2340,7 +2340,7 @@ export default function StakeV2() {
                     <Trans>Total Supply</Trans>
                   </div>
                   <div>
-                    {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} GLP ($
+                    {formatKeyAmount(processedData, "glpSupply", 18, 2, true)} GXP ($
                     {formatKeyAmount(processedData, "glpSupplyUsd", USD_DECIMALS, 2, true)})
                   </div>
                 </div>
@@ -2352,10 +2352,10 @@ export default function StakeV2() {
               <div className="App-card-divider" />
               <div className="App-card-buttons glp-buttons m-0">
                 <Button variant="secondary" to="/buy_glp">
-                  <Trans>Buy GLP</Trans>
+                  <Trans>Buy GXP</Trans>
                 </Button>
                 <Button variant="secondary" to="/buy_glp#redeem">
-                  <Trans>Sell GLP</Trans>
+                  <Trans>Sell GXP</Trans>
                 </Button>
                 {hasInsurance && (
                   <Button
@@ -2371,7 +2371,7 @@ export default function StakeV2() {
           <div className="App-card">
             <div className="App-card-title">
               <div className="inline-items-center">
-                <img className="mr-xs" alt="GLP" src={icons.esgmx} height={20} />
+                <img className="mr-xs" alt="GXP" src={icons.esgmx} height={20} />
                 <span>
                   <Trans>Escrowed GMX</Trans>
                 </span>
@@ -2632,8 +2632,8 @@ export default function StakeV2() {
             <div className="App-card StakeV2-gmx-card">
               <div className="App-card-title">
                 <div className="inline-items-center">
-                  <img className="mr-xs" alt="GLP" src={icons.glp} height={20} />
-                  <Trans>GLP Vault</Trans>
+                  <img className="mr-xs" alt="GXP" src={icons.glp} height={20} />
+                  <Trans>GXP Vault</Trans>
                 </div>
               </div>
               <div className="App-card-divider"></div>
@@ -2642,7 +2642,7 @@ export default function StakeV2() {
                   <div className="label">
                     <Trans>Staked Tokens</Trans>
                   </div>
-                  <div>{formatAmount(processedData?.glpBalance, 18, 2, true)} GLP</div>
+                  <div>{formatAmount(processedData?.glpBalance, 18, 2, true)} GXP</div>
                 </div>
                 <div className="App-card-row">
                   <div className="label">
@@ -2723,7 +2723,7 @@ export default function StakeV2() {
               <div className="App-card StakeV2-gmx-card">
                 <div className="App-card-title">
                   <div className="inline-items-center">
-                    <img className="mr-xs" alt="GLP" src={icons.gmx} height={20} />
+                    <img className="mr-xs" alt="GXP" src={icons.gmx} height={20} />
                     <Trans>Affiliate Vault</Trans>
                   </div>
                 </div>
@@ -2799,7 +2799,7 @@ export default function StakeV2() {
           subtitle={
             incentiveStats?.lp?.isActive || incentiveStats?.trading?.isActive ? (
               <Trans>
-                Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GLP to GM. Only for GMX
+                Earn ARB tokens by purchasing GM tokens, trading, or migrating liquidity from GXP to GM. Only for GMX
                 V2.
                 <br />
                 Earn prizes by participating in GMX Trading Competitions.
