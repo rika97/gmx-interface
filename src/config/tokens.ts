@@ -32,7 +32,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "GMX XP",
       symbol: "GXP",
-      address: "0xd74688c1e65482d6DfD59880bF542A15CB2F388E",
+      address: "0x7C54F8d25F224DeE7A0FA7583f621E9AebE24DfE",
       decimals: 18,
       imageUrl: "https://github.com/gmx-io/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
       reservesUrl: "https://portfolio.nansen.ai/dashboard/gmx?chain=HARMONY",
