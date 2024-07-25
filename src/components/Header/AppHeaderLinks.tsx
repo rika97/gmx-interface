@@ -47,7 +47,7 @@ export function AppHeaderLinks({ small, openSettings, clickCloseIcon, showRedire
       </div> */}
       <div className="App-header-link-container">
         <HeaderLink to="/buy" showRedirectModal={showRedirectModal}>
-          <Trans>Buy</Trans>
+          <Trans>Buy GXP</Trans>
         </HeaderLink>
       </div>
       {/* <div className="App-header-link-container">

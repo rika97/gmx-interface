@@ -15,7 +15,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       isNative: true,
       isShortable: true,
       imageUrl: "https://etherscan.io/token/images/harmonyone_32.png",
-      coingeckoUrl: "https://www.coingecko.com/en/coins/harmonyone",
+      coingeckoUrl: "https://www.coingecko.com/en/coins/harmony",
       isV1Available: true,
     },
     {
@@ -26,7 +26,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       isWrapped: true,
       baseSymbol: "ONE",
       imageUrl: "https://etherscan.io/token/images/harmonyone_32.png",
-      coingeckoUrl: "https://www.coingecko.com/en/coins/harmonyone",
+      coingeckoUrl: "https://www.coingecko.com/en/coins/harmony",
       isV1Available: true,
     },
     {

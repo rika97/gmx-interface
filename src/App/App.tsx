@@ -12,7 +12,7 @@ import { decodeReferralCode, encodeReferralCode } from "domain/referrals";
 import Actions from "pages/Actions/Actions";
 import BeginAccountTransfer from "pages/BeginAccountTransfer/BeginAccountTransfer";
 import Buy from "pages/Buy/Buy";
-import BuyGlp from "pages/BuyGlp/BuyGlp";
+import BuyGxp from "pages/BuyGxp/BuyGxp";
 import BuyGMX from "pages/BuyGMX/BuyGMX";
 import ClaimEsGmx from "pages/ClaimEsGmx/ClaimEsGmx";
 import CompleteAccountTransfer from "pages/CompleteAccountTransfer/CompleteAccountTransfer";
@@ -298,8 +298,8 @@ function FullApp() {
                 )}
               </Route>
               <Redirect from="/v2" to="/trade" />
-              <Route exact path="/buy_glp">
-                <BuyGlp />
+              <Route exact path="/buy_gxp">
+                <BuyGxp />
               </Route>
               <Route exact path="/jobs">
                 <Jobs />

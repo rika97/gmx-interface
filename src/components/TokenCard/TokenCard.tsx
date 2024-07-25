@@ -198,10 +198,10 @@ export default function TokenCard({ showRedirectModal }: Props) {
         </div>
         <div className="Home-token-card-option-action">
           <div className="buy">
-            <BuyLink to="/buy_glp" className="default-btn" network={HARMONY}>
+            <BuyLink to="/buy_gxp" className="default-btn" network={HARMONY}>
               <Trans>View on Harmony</Trans>
             </BuyLink>
-            {/* <BuyLink to="/buy_glp" className="default-btn" network={AVALANCHE}>
+            {/* <BuyLink to="/buy_gxp" className="default-btn" network={AVALANCHE}>
               <Trans>View on Avalanche</Trans>
             </BuyLink> */}
           </div>
