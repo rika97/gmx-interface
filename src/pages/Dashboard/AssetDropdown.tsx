@@ -20,7 +20,7 @@ import { getTokenExplorerUrl } from "config/chains";
 
 const PLATFORM_TOKEN_ROUTES = {
   GMX: "/buy_gmx",
-  GLP: "/buy_glp",
+  GLP: "/buy_gxp",
   GM: "/pools",
 };
 

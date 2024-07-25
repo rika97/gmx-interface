@@ -2351,10 +2351,10 @@ export default function StakeV2() {
             <div>
               <div className="App-card-divider" />
               <div className="App-card-buttons glp-buttons m-0">
-                <Button variant="secondary" to="/buy_glp">
+                <Button variant="secondary" to="/buy_gxp">
                   <Trans>Buy GXP</Trans>
                 </Button>
-                <Button variant="secondary" to="/buy_glp#redeem">
+                <Button variant="secondary" to="/buy_gxp#redeem">
                   <Trans>Sell GXP</Trans>
                 </Button>
                 {hasInsurance && (

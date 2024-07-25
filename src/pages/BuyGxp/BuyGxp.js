@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import GlpSwap from "components/Glp/GlpSwap";
 import Footer from "components/Footer/Footer";
-import "./BuyGlp.css";
+import "./BuyGxp.css";
 
 import { Trans, t } from "@lingui/macro";
 import { getNativeToken } from "config/tokens";
@@ -12,7 +12,7 @@ import ExternalLink from "components/ExternalLink/ExternalLink";
 import PageTitle from "components/PageTitle/PageTitle";
 import useIncentiveStats from "domain/synthetics/common/useIncentiveStats";
 
-export default function BuyGlp() {
+export default function BuyGxp() {
   const { chainId } = useChainId();
   const history = useHistory();
   const [isBuying, setIsBuying] = useState(true);
