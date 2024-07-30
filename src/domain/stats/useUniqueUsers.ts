@@ -3,7 +3,7 @@ import { getSubgraphUrl } from "config/subgraph";
 import graphqlFetcher from "lib/graphqlFetcher";
 import useSWR from "swr";
 
-const ACTIVE_CHAIN_IDS = [ARBITRUM, AVALANCHE, HARMONY];
+const ACTIVE_CHAIN_IDS = [HARMONY];
 
 type UserStatsData = {
   userStats: {

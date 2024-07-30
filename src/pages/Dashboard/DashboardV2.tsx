@@ -29,7 +29,7 @@ import { MarketsList } from "components/Synthetics/MarketsList/MarketsList";
 import TokenIcon from "components/TokenIcon/TokenIcon";
 import { VersionSwitch } from "components/VersionSwitch/VersionSwitch";
 import { getServerUrl } from "config/backend";
-import { ARBITRUM, AVALANCHE, getChainName } from "config/chains";
+import { ARBITRUM, AVALANCHE, HARMONY, getChainName } from "config/chains";
 import { getIsSyntheticsSupported } from "config/features";
 import { getIcons } from "config/icons";
 import { TOKEN_COLOR_MAP, getTokenBySymbol, getWhitelistedV1Tokens } from "config/tokens";
@@ -66,7 +66,7 @@ import useWallet from "lib/wallets/useWallet";
 import { groupBy } from "lodash";
 import AssetDropdown from "./AssetDropdown";
 
-const ACTIVE_CHAIN_IDS = [ARBITRUM, AVALANCHE];
+const ACTIVE_CHAIN_IDS = [HARMONY];
 
 const { AddressZero } = ethers.constants;
 
@@ -116,14 +116,13 @@ export default function DashboardV2() {
   const { active, signer } = useWallet();
   const { chainId } = useChainId();
   const totalVolume = useTotalVolume();
-  const arbitrumOverview = useV2Stats(ARBITRUM);
-  const avalancheOverview = useV2Stats(AVALANCHE);
+  const harmonyOverview = useV2Stats(HARMONY);
+  // const avalancheOverview = useV2Stats(AVALANCHE);
   const v2MarketsOverview = useMemo(
     () => ({
-      [ARBITRUM]: arbitrumOverview,
-      [AVALANCHE]: avalancheOverview,
+      [HARMONY]: harmonyOverview,
     }),
-    [arbitrumOverview, avalancheOverview]
+    [harmonyOverview]
   );
   const currentV2MarketOverview = v2MarketsOverview[chainId];
   const uniqueUsers = useUniqueUsers();
@@ -209,7 +208,7 @@ export default function DashboardV2() {
               const feeUSD = getCurrentFeesUsd(
                 getWhitelistedTokenAddresses(ACTIVE_CHAIN_IDS[i]),
                 cv,
-                ACTIVE_CHAIN_IDS[i] === ARBITRUM ? infoTokensArbitrum : infoTokensAvax
+                ACTIVE_CHAIN_IDS[i] === HARMONY ? infoTokensArbitrum : infoTokensAvax
               );
               acc[ACTIVE_CHAIN_IDS[i]] = feeUSD;
               acc.total = acc.total.add(feeUSD);
@@ -255,7 +254,7 @@ export default function DashboardV2() {
 
   let { total: totalGmxInLiquidity } = useTotalGmxInLiquidity();
 
-  let { [AVALANCHE]: avaxStakedGmx, [ARBITRUM]: arbitrumStakedGmx, total: totalStakedGmx } = useTotalGmxStaked();
+  let { [HARMONY]: harmonyStakedGmx, total: totalStakedGmx } = useTotalGmxStaked();
 
   let gmxMarketCap;
   if (gmxPrice && totalGmxSupply) {
@@ -550,10 +549,9 @@ export default function DashboardV2() {
 
   const stakedEntries = useMemo(
     () => ({
-      "Staked on Arbitrum": arbitrumStakedGmx,
-      "Staked on Avalanche": avaxStakedGmx,
+      "Staked on Harmony": harmonyStakedGmx,
     }),
-    [arbitrumStakedGmx, avaxStakedGmx]
+    [harmonyStakedGmx]
   );
 
   return (
@@ -567,9 +565,9 @@ export default function DashboardV2() {
               <Trans>
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> For detailed stats:
               </Trans>{" "}
-              {chainId === ARBITRUM && <ExternalLink href="https://stats.gmx.io">V1</ExternalLink>}
-              {chainId === AVALANCHE && <ExternalLink href="https://stats.gmx.io/avalanche">V1</ExternalLink>} |{" "}
-              <ExternalLink href="https://dune.com/gmx-io/gmx-analytics">V2</ExternalLink>.
+              {chainId === HARMONY && <ExternalLink href="https://gmx-stats.fly.dev">V1</ExternalLink>}
+              {/* {chainId === AVALANCHE && <ExternalLink href="https://stats.gmx.io/avalanche">V1</ExternalLink>} |{" "} */}
+              {/* <ExternalLink href="https://dune.com/gmx-io/gmx-analytics">V2</ExternalLink>. */}
             </div>
           }
         />
@@ -787,7 +785,7 @@ export default function DashboardV2() {
                       position="bottom-end"
                       className="nowrap"
                       handle={formatAmount(
-                        sumBigNumbers(uniqueUsers?.[chainId], v2MarketsOverview?.[chainId]?.totalUsers),
+                        sumBigNumbers(uniqueUsers?.[chainId]), //v2MarketsOverview?.[chainId]?.totalUsers
                         0,
                         0,
                         true

@@ -538,28 +538,16 @@ export function useTotalGmxSupply() {
 }
 
 export function useTotalGmxStaked() {
-  const stakedGmxTrackerAddressArbitrum = getContract(ARBITRUM, "StakedGmxTracker");
-  const stakedGmxTrackerAddressAvax = getContract(AVALANCHE, "StakedGmxTracker");
+  const stakedGmxTrackerAddressHarmony = getContract(HARMONY, "StakedGmxTracker");
+  // const stakedGmxTrackerAddressAvax = getContract(AVALANCHE, "StakedGmxTracker");
   let totalStakedGmx = useRef(BN_ZERO);
-  const { data: stakedGmxSupplyArbitrum, mutate: updateStakedGmxSupplyArbitrum } = useSWR<BigNumber>(
+  const { data: stakedGmxSupplyHarmony, mutate: updateStakedGmxSupplyHarmony } = useSWR<BigNumber>(
     [
-      `StakeV2:stakedGmxSupply:${ARBITRUM}`,
-      ARBITRUM,
-      getContract(ARBITRUM, "GMX"),
+      `StakeV2:stakedGmxSupply:${HARMONY}`,
+      HARMONY,
+      getContract(HARMONY, "GMX"),
       "balanceOf",
-      stakedGmxTrackerAddressArbitrum,
-    ],
-    {
-      fetcher: contractFetcher(undefined, Token) as any,
-    }
-  );
-  const { data: stakedGmxSupplyAvax, mutate: updateStakedGmxSupplyAvax } = useSWR<BigNumber>(
-    [
-      `StakeV2:stakedGmxSupply:${AVALANCHE}`,
-      AVALANCHE,
-      getContract(AVALANCHE, "GMX"),
-      "balanceOf",
-      stakedGmxTrackerAddressAvax,
+      stakedGmxTrackerAddressHarmony,
     ],
     {
       fetcher: contractFetcher(undefined, Token) as any,
@@ -567,18 +555,16 @@ export function useTotalGmxStaked() {
   );
 
   const mutate = useCallback(() => {
-    updateStakedGmxSupplyArbitrum();
-    updateStakedGmxSupplyAvax();
-  }, [updateStakedGmxSupplyArbitrum, updateStakedGmxSupplyAvax]);
+    updateStakedGmxSupplyHarmony();
+  }, [updateStakedGmxSupplyHarmony]);
 
-  if (stakedGmxSupplyArbitrum && stakedGmxSupplyAvax) {
-    let total = BigNumber.from(stakedGmxSupplyArbitrum).add(stakedGmxSupplyAvax);
+  if (stakedGmxSupplyHarmony) {
+    let total = BigNumber.from(stakedGmxSupplyHarmony).add(0);
     totalStakedGmx.current = total;
   }
 
   return {
-    [AVALANCHE]: stakedGmxSupplyAvax,
-    [ARBITRUM]: stakedGmxSupplyArbitrum,
+    [HARMONY]: stakedGmxSupplyHarmony,
     total: totalStakedGmx.current,
     mutate,
   };

@@ -38,6 +38,16 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       reservesUrl: "https://portfolio.nansen.ai/dashboard/gmx?chain=HARMONY",
       isPlatformToken: true,
     },
+    {
+      name: "GMX",
+      symbol: "GMX",
+      address: getContract(HARMONY, "GMX"),
+      decimals: 18,
+      isPlatformToken: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+      coingeckoUrl: "https://www.coingecko.com/en/coins/gmx",
+      explorerUrl: `https://explorer.harmony.one/token/${getContract(HARMONY, "GMX")}`,
+    },
 
     // {
     //   name: "BUSD",

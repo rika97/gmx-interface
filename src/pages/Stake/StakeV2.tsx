@@ -14,7 +14,7 @@ import Token from "abis/Token.json";
 import Vault from "abis/Vault.json";
 import Vester from "abis/Vester.json";
 
-import { ARBITRUM, AVALANCHE, getConstant } from "config/chains";
+import { ARBITRUM, AVALANCHE, HARMONY, getConstant } from "config/chains";
 import { useGmxPrice, useTotalGmxStaked, useTotalGmxSupply } from "domain/legacy";
 import { useRecommendStakeGmxAmount } from "domain/stake/useRecommendStakeGmxAmount";
 import { useAccumulatedBnGMXAmount } from "domain/rewards/useAccumulatedBnGMXAmount";
@@ -1334,7 +1334,7 @@ export default function StakeV2() {
   let { total: totalGmxSupply } = useTotalGmxSupply();
 
   const stakedGMXInfo = useTotalGmxStaked();
-  const { [AVALANCHE]: avaxGmxStaked, [ARBITRUM]: arbitrumGmxStaked, total: totalGmxStaked } = stakedGMXInfo;
+  const { [HARMONY]: harmonyGmxStaked, total: totalGmxStaked } = stakedGMXInfo;
 
   const gmxSupplyUrl = getServerUrl(chainId, "/gmx_supply");
   const { data: gmxSupply } = useSWR([gmxSupplyUrl], {
@@ -1713,10 +1713,9 @@ export default function StakeV2() {
 
   const stakedEntries = useMemo(
     () => ({
-      "Staked on Arbitrum": arbitrumGmxStaked,
-      "Staked on Avalanche": avaxGmxStaked,
+      "Staked on Harmony": harmonyGmxStaked,
     }),
-    [arbitrumGmxStaked, avaxGmxStaked]
+    [harmonyGmxStaked]
   );
 
   return (

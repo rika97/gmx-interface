@@ -1,10 +1,12 @@
 import { createClient } from "./utils";
-import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI, ETH_MAINNET } from "config/chains";
+import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI, ETH_MAINNET, HARMONY } from "config/chains";
 
 export const chainlinkClient = createClient(ETH_MAINNET, "chainLink");
 
 export const arbitrumGraphClient = createClient(ARBITRUM, "stats");
+export const harmonyGraphClient = createClient(HARMONY, "stats");
 export const arbitrumReferralsGraphClient = createClient(ARBITRUM, "referrals");
+export const harmonyReferralsGraphClient = createClient(HARMONY, "referrals");
 export const arbitrumGoerliReferralsGraphClient = createClient(ARBITRUM_GOERLI, "referrals");
 export const nissohGraphClient = createClient(ARBITRUM, "nissohVault");
 
@@ -22,69 +24,85 @@ export const avalancheSubsquidClient = createClient(AVALANCHE, "subsquid");
 export const avalancheFujiSubsquidClient = createClient(AVALANCHE_FUJI, "subsquid");
 export const arbitrumGoerliSubsquidClient = createClient(ARBITRUM_GOERLI, "subsquid");
 
+export const harmonySubsquidClient = createClient(HARMONY, "subsquid");
+
 export function getSyntheticsGraphClient(chainId: number) {
-  if (chainId === ARBITRUM) {
-    return arbitrumSyntheticsStatsClient;
+  if (chainId === HARMONY) {
+    return harmonyReferralsGraphClient;
   }
 
-  if (chainId === AVALANCHE) {
-    return avalancheSyntheticsStatsClient;
-  }
+  // if (chainId === ARBITRUM) {
+  //   return arbitrumSyntheticsStatsClient;
+  // }
 
-  if (chainId === AVALANCHE_FUJI) {
-    return avalancheFujiSyntheticsStatsClient;
-  }
+  // if (chainId === AVALANCHE) {
+  //   return avalancheSyntheticsStatsClient;
+  // }
 
-  if (chainId === ARBITRUM_GOERLI) {
-    return arbitrumGoerliSyntheticsStatsClient;
-  }
+  // if (chainId === AVALANCHE_FUJI) {
+  //   return avalancheFujiSyntheticsStatsClient;
+  // }
+
+  // if (chainId === ARBITRUM_GOERLI) {
+  //   return arbitrumGoerliSyntheticsStatsClient;
+  // }
 
   return null;
 }
 
 export function getSubsquidGraphClient(chainId: number) {
-  if (chainId === ARBITRUM) {
-    return arbitrumSubsquidClient;
+  if (chainId === HARMONY) {
+    return harmonySubsquidClient;
   }
 
-  if (chainId === AVALANCHE) {
-    return avalancheSubsquidClient;
-  }
+  // if (chainId === ARBITRUM) {
+  //   return arbitrumSubsquidClient;
+  // }
 
-  if (chainId === AVALANCHE_FUJI) {
-    return avalancheFujiSubsquidClient;
-  }
+  // if (chainId === AVALANCHE) {
+  //   return avalancheSubsquidClient;
+  // }
 
-  if (chainId === ARBITRUM_GOERLI) {
-    return arbitrumGoerliSubsquidClient;
-  }
+  // if (chainId === AVALANCHE_FUJI) {
+  //   return avalancheFujiSubsquidClient;
+  // }
 
-  return null;
+  // if (chainId === ARBITRUM_GOERLI) {
+  //   return arbitrumGoerliSubsquidClient;
+  // }
+
+  // return null;
 }
 
 export function getGmxGraphClient(chainId: number) {
-  if (chainId === ARBITRUM) {
-    return arbitrumGraphClient;
-  } else if (chainId === AVALANCHE) {
-    return avalancheGraphClient;
-  } else if (chainId === ARBITRUM_GOERLI || chainId === AVALANCHE_FUJI) {
-    return null;
+  if (chainId === HARMONY) {
+    return harmonyGraphClient
   }
 
-  return null;
+  // if (chainId === ARBITRUM) {
+  //   return arbitrumGraphClient;
+  // } else if (chainId === AVALANCHE) {
+  //   return avalancheGraphClient;
+  // } else if (chainId === ARBITRUM_GOERLI || chainId === AVALANCHE_FUJI) {
+  //   return null;
+  // }
 
   throw new Error(`Unsupported chain ${chainId}`);
 }
 
 export function getReferralsGraphClient(chainId) {
-  if (chainId === ARBITRUM) {
+  if(chainId === HARMONY) {
     return arbitrumReferralsGraphClient;
-  } else if (chainId === AVALANCHE) {
-    return avalancheReferralsGraphClient;
-  } else if (chainId === AVALANCHE_FUJI) {
-    return avalancheFujiReferralsGraphClient;
-  } else if (chainId === ARBITRUM_GOERLI) {
-    return arbitrumGoerliReferralsGraphClient;
   }
+
+  // if (chainId === ARBITRUM) {
+  //   return arbitrumReferralsGraphClient;
+  // } else if (chainId === AVALANCHE) {
+  //   return avalancheReferralsGraphClient;
+  // } else if (chainId === AVALANCHE_FUJI) {
+  //   return avalancheFujiReferralsGraphClient;
+  // } else if (chainId === ARBITRUM_GOERLI) {
+  //   return arbitrumGoerliReferralsGraphClient;
+  // }
   throw new Error(`Unsupported chain ${chainId}`);
 }

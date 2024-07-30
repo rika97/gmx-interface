@@ -2,13 +2,19 @@ import { ARBITRUM, ARBITRUM_GOERLI, AVALANCHE, AVALANCHE_FUJI, ETH_MAINNET, HARM
 import { isDevelopment } from "./env";
 import { getSubgraphUrlKey } from "./localStorage";
 
+const SATSUMA_KEY = process.env.SATSUMA_KEY || "78881"; // "default" key
+
+function getHarmonySubgraphUrl(name) {
+  return `https://api.studio.thegraph.com/query/${SATSUMA_KEY}/${name}/version/latest/api`
+}
+
 const SUBGRAPH_URLS = {
   [HARMONY]: {
-    stats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-stats/api",
-    referrals: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/gmx-arbitrum-referrals/api",
-    nissohVault: "https://api.thegraph.com/subgraphs/name/nissoh/gmx-vault",
-    syntheticsStats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/synthetics-arbitrum-stats/api",
-    subsquid: "https://gmx.squids.live/gmx-synthetics-arbitrum/graphql",
+    stats: getHarmonySubgraphUrl('gmx-h-stats'),
+    referrals: getHarmonySubgraphUrl('gmx-h-referrals'),
+    nissohVault: getHarmonySubgraphUrl('gmx-h-vault'),
+    // syntheticsStats: "https://subgraph.satsuma-prod.com/3b2ced13c8d9/gmx/synthetics-arbitrum-stats/api",
+    // subsquid: "https://gmx.squids.live/gmx-synthetics-arbitrum/graphql",
   },
 
   [ARBITRUM]: {
@@ -49,7 +55,7 @@ const SUBGRAPH_URLS = {
 };
 
 export function getSubgraphUrl(chainId: number, subgraph: string): string | undefined {
-  // let chainId = ARBITRUM;
+  chainId = HARMONY;
 
   if (isDevelopment()) {
     const localStorageKey = getSubgraphUrlKey(chainId, subgraph);
